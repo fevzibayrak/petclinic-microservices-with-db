@@ -3535,9 +3535,9 @@ docker push "${IMAGE_TAG_PROMETHEUS_SERVICE}"
 * Install `Rancher CLI` on Jenkins Server.
 
 ```bash
-curl -SsL "https://github.com/rancher/cli/releases/download/v2.6.9/rancher-linux-amd64-v2.6.9.tar.gz" -o "rancher-cli.tar.gz"
+curl -SsL "https://github.com/rancher/cli/releases/download/v2.7.0/rancher-linux-amd64-v2.7.0.tar.gz" -o "rancher-cli.tar.gz"
 tar -zxvf rancher-cli.tar.gz
-sudo mv ./rancher-v2.6.9/rancher /usr/local/bin/rancher
+sudo mv ./rancher*/rancher /usr/local/bin/rancher
 chmod +x /usr/local/bin/rancher
 rancher --version
 ```
@@ -4012,7 +4012,7 @@ git checkout feature/msp-29
   * Install the `Custom Resource Definition` resources separately
 
   ```bash
-  kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.11.0/cert-manager.crds.yaml
+  kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.12.0/cert-manager.crds.yaml
   ```
 
   * Install the cert-manager Helm chart
@@ -4021,7 +4021,7 @@ git checkout feature/msp-29
   helm install \
   cert-manager jetstack/cert-manager \
   --namespace cert-manager \
-  --version v1.11.0
+  --version v1.12.0
   ```
 
   * Verify that the cert-manager is deployed correctly.
