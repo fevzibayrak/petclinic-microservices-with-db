@@ -3681,6 +3681,13 @@ git merge feature/msp-27
 git push origin release
 ```
 
+Note: To see petclinic app on your browser, change networkpolicy ingress part as below on rancher server.
+
+```yaml
+  ingress:
+    - {}
+```
+
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 ## MSP 28 - Prepare a Production Pipeline
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
