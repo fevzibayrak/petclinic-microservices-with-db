@@ -3426,9 +3426,9 @@ nano /home/ec2-user/.m2/settings.xml
 git add .
 git commit -m 'added Nexus server terraform files'
 git push --set-upstream origin feature/msp-26
-git checkout dev
+git checkout release
 git merge feature/msp-26
-git push origin dev
+git push origin release
 ```
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
@@ -3681,6 +3681,13 @@ git merge feature/msp-27
 git push origin release
 ```
 
+Note: To see petclinic app on your browser, change networkpolicy ingress part as below on rancher server.
+
+```yaml
+  ingress:
+    - {}
+```
+
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 ## MSP 28 - Prepare a Production Pipeline
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
@@ -3856,7 +3863,7 @@ kind: Service
 metadata:
   annotations:
     kompose.cmd: kompose convert -f docker-compose-local-db.yml
-    kompose.version: 1.26.1 (a9d05d509)
+    kompose.version: 1.28.0 (c4137012e)
   labels:
     io.kompose.service: mysql-server
   name: mysql-server
