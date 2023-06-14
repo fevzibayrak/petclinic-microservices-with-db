@@ -8,4 +8,6 @@ metadata:
   labels:
     io.kompose.service: mysql-server
   name: mysql-server
-petclinic.c2txj8avfzrp.us-east-1.rds.amazonaws.com
+spec:
+  type: ExternalName
+  externalName: petclinic.c2txj8avfzrp.us-east-1.rds.amazonaws.com
